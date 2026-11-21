@@ -1,0 +1,337 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-11-21T09:00:00+00:00",
+  "regions": [
+    {
+      "region": "eu-central-1",
+      "streams": [
+        {
+          "name": "orders-events",
+          "arn": "arn:aws:kinesis:eu-central-1:111122223333:stream/orders-events",
+          "status": "ACTIVE",
+          "mode": "PROVISIONED",
+          "retention_hours": 24,
+          "open_shard_count": 2,
+          "encryption_type": "KMS",
+          "key_id": "arn:aws:kms:eu-central-1:111122223333:key/8e3c1f0a-1111-2222-3333-444455556666",
+          "shard_level_metrics": [
+            "ALL"
+          ],
+          "shards": [
+            {
+              "shard_id": "shardId-000000000000",
+              "parent_shard_id": null,
+              "adjacent_parent_shard_id": null,
+              "starting_hash_key": "0",
+              "ending_hash_key": "170141183460469231731687303715884105727",
+              "closed": false
+            },
+            {
+              "shard_id": "shardId-000000000001",
+              "parent_shard_id": null,
+              "adjacent_parent_shard_id": null,
+              "starting_hash_key": "170141183460469231731687303715884105728",
+              "ending_hash_key": "340282366920938463463374607431768211455",
+              "closed": false
+            }
+          ],
+          "consumers": [
+            {
+              "name": "order-projector",
+              "arn": "arn:aws:kinesis:eu-central-1:111122223333:stream/orders-events/consumer/order-projector:1761955200",
+              "status": "ACTIVE",
+              "creation_timestamp": "2026-11-01T09:00:00+00:00"
+            }
+          ],
+          "tags": {
+            "owner": "payments",
+            "kinesis-throughput-mbps": "5"
+          }
+        },
+        {
+          "name": "clickstream-raw",
+          "arn": "arn:aws:kinesis:eu-central-1:111122223333:stream/clickstream-raw",
+          "status": "ACTIVE",
+          "mode": "PROVISIONED",
+          "retention_hours": 168,
+          "open_shard_count": 8,
+          "encryption_type": "NONE",
+          "key_id": null,
+          "shard_level_metrics": [],
+          "shards": [
+            {
+              "shard_id": "shardId-000000000000",
+              "parent_shard_id": null,
+              "adjacent_parent_shard_id": null,
+              "starting_hash_key": "0",
+              "ending_hash_key": "42535295865117307932921825928971026431",
+              "closed": false
+            },
+            {
+              "shard_id": "shardId-000000000001",
+              "parent_shard_id": null,
+              "adjacent_parent_shard_id": null,
+              "starting_hash_key": "42535295865117307932921825928971026432",
+              "ending_hash_key": "85070591730234615865843651857942052863",
+              "closed": false
+            },
+            {
+              "shard_id": "shardId-000000000002",
+              "parent_shard_id": null,
+              "adjacent_parent_shard_id": null,
+              "starting_hash_key": "85070591730234615865843651857942052864",
+              "ending_hash_key": "127605887595351923798765477786913079295",
+              "closed": false
+            },
+            {
+              "shard_id": "shardId-000000000003",
+              "parent_shard_id": null,
+              "adjacent_parent_shard_id": null,
+              "starting_hash_key": "127605887595351923798765477786913079296",
+              "ending_hash_key": "170141183460469231731687303715884105727",
+              "closed": false
+            },
+            {
+              "shard_id": "shardId-000000000004",
+              "parent_shard_id": null,
+              "adjacent_parent_shard_id": null,
+              "starting_hash_key": "170141183460469231731687303715884105728",
+              "ending_hash_key": "212676479325586539664609129644855132159",
+              "closed": false
+            },
+            {
+              "shard_id": "shardId-000000000005",
+              "parent_shard_id": null,
+              "adjacent_parent_shard_id": null,
+              "starting_hash_key": "212676479325586539664609129644855132160",
+              "ending_hash_key": "255211775190703847597530955573826158591",
+              "closed": false
+            },
+            {
+              "shard_id": "shardId-000000000006",
+              "parent_shard_id": null,
+              "adjacent_parent_shard_id": null,
+              "starting_hash_key": "255211775190703847597530955573826158592",
+              "ending_hash_key": "297747071055821155530452781502797185023",
+              "closed": false
+            },
+            {
+              "shard_id": "shardId-000000000007",
+              "parent_shard_id": null,
+              "adjacent_parent_shard_id": null,
+              "starting_hash_key": "297747071055821155530452781502797185024",
+              "ending_hash_key": "340282366920938463463374607431768211455",
+              "closed": false
+            },
+            {
+              "shard_id": "shardId-000000000900",
+              "parent_shard_id": null,
+              "adjacent_parent_shard_id": null,
+              "starting_hash_key": "0",
+              "ending_hash_key": "340282366920938463463374607431768211455",
+              "closed": true
+            },
+            {
+              "shard_id": "shardId-000000000901",
+              "parent_shard_id": null,
+              "adjacent_parent_shard_id": null,
+              "starting_hash_key": "0",
+              "ending_hash_key": "340282366920938463463374607431768211455",
+              "closed": true
+            }
+          ],
+          "consumers": [],
+          "tags": {
+            "owner": "growth"
+          }
+        },
+        {
+          "name": "billing-ledger",
+          "arn": "arn:aws:kinesis:eu-central-1:111122223333:stream/billing-ledger",
+          "status": "ACTIVE",
+          "mode": "PROVISIONED",
+          "retention_hours": 48,
+          "open_shard_count": 1,
+          "encryption_type": "KMS",
+          "key_id": "alias/aws/kinesis",
+          "shard_level_metrics": [
+            "IncomingBytes",
+            "WriteProvisionedThroughputExceeded"
+          ],
+          "shards": [
+            {
+              "shard_id": "shardId-000000000000",
+              "parent_shard_id": null,
+              "adjacent_parent_shard_id": null,
+              "starting_hash_key": "0",
+              "ending_hash_key": "340282366920938463463374607431768211455",
+              "closed": false
+            }
+          ],
+          "consumers": [
+            {
+              "name": "ledger-archiver",
+              "arn": "arn:aws:kinesis:eu-central-1:111122223333:stream/billing-ledger/consumer/ledger-archiver:1704067200",
+              "status": "ACTIVE",
+              "creation_timestamp": "2024-01-01T00:00:00+00:00"
+            }
+          ],
+          "tags": {
+            "owner": "finance",
+            "source-of-record": "true"
+          }
+        },
+        {
+          "name": "telemetry-ondemand",
+          "arn": "arn:aws:kinesis:eu-central-1:111122223333:stream/telemetry-ondemand",
+          "status": "ACTIVE",
+          "mode": "ON_DEMAND",
+          "retention_hours": 24,
+          "open_shard_count": 4,
+          "encryption_type": "KMS",
+          "key_id": "arn:aws:kms:eu-central-1:111122223333:key/9a7b2c3d-5555-6666-7777-888899990000",
+          "shard_level_metrics": [
+            "ALL"
+          ],
+          "shards": [
+            {
+              "shard_id": "shardId-000000000000",
+              "parent_shard_id": null,
+              "adjacent_parent_shard_id": null,
+              "starting_hash_key": "0",
+              "ending_hash_key": "85070591730234615865843651857942052863",
+              "closed": false
+            },
+            {
+              "shard_id": "shardId-000000000001",
+              "parent_shard_id": null,
+              "adjacent_parent_shard_id": null,
+              "starting_hash_key": "85070591730234615865843651857942052864",
+              "ending_hash_key": "170141183460469231731687303715884105727",
+              "closed": false
+            },
+            {
+              "shard_id": "shardId-000000000002",
+              "parent_shard_id": null,
+              "adjacent_parent_shard_id": null,
+              "starting_hash_key": "170141183460469231731687303715884105728",
+              "ending_hash_key": "255211775190703847597530955573826158591",
+              "closed": false
+            },
+            {
+              "shard_id": "shardId-000000000003",
+              "parent_shard_id": null,
+              "adjacent_parent_shard_id": null,
+              "starting_hash_key": "255211775190703847597530955573826158592",
+              "ending_hash_key": "340282366920938463463374607431768211455",
+              "closed": false
+            }
+          ],
+          "consumers": [
+            {
+              "name": "metrics-tap",
+              "arn": "arn:aws:kinesis:eu-central-1:111122223333:stream/telemetry-ondemand/consumer/metrics-tap:1762560000",
+              "status": "ACTIVE",
+              "creation_timestamp": "2026-11-08T00:00:00+00:00"
+            }
+          ],
+          "tags": {
+            "owner": "platform",
+            "kinesis-throughput-mbps": "0.4"
+          }
+        },
+        {
+          "name": "reshard-leftover",
+          "arn": "arn:aws:kinesis:eu-central-1:111122223333:stream/reshard-leftover",
+          "status": "UPDATING",
+          "mode": "PROVISIONED",
+          "retention_hours": 72,
+          "open_shard_count": 2,
+          "encryption_type": "KMS",
+          "key_id": "arn:aws:kms:eu-central-1:111122223333:key/1b2c3d4e-aaaa-bbbb-cccc-ddddeeeeffff",
+          "shard_level_metrics": [
+            "ALL"
+          ],
+          "shards": [
+            {
+              "shard_id": "shardId-000000000004",
+              "parent_shard_id": "shardId-000000000001",
+              "adjacent_parent_shard_id": null,
+              "starting_hash_key": "0",
+              "ending_hash_key": "255211775190703847597530955573826158591",
+              "closed": false
+            },
+            {
+              "shard_id": "shardId-000000000005",
+              "parent_shard_id": "shardId-000000000001",
+              "adjacent_parent_shard_id": null,
+              "starting_hash_key": "255211775190703847597530955573826158592",
+              "ending_hash_key": "340282366920938463463374607431768211455",
+              "closed": false
+            },
+            {
+              "shard_id": "shardId-000000000001",
+              "parent_shard_id": null,
+              "adjacent_parent_shard_id": null,
+              "starting_hash_key": "0",
+              "ending_hash_key": "340282366920938463463374607431768211455",
+              "closed": true
+            }
+          ],
+          "consumers": [
+            {
+              "name": "legacy-pipeline",
+              "arn": "arn:aws:kinesis:eu-central-1:111122223333:stream/reshard-leftover/consumer/legacy-pipeline:1700000000",
+              "status": "DELETING",
+              "creation_timestamp": "2025-06-01T00:00:00+00:00"
+            }
+          ],
+          "tags": {}
+        },
+        {
+          "name": "audit-trail",
+          "arn": "arn:aws:kinesis:eu-central-1:111122223333:stream/audit-trail",
+          "status": "ACTIVE",
+          "mode": "PROVISIONED",
+          "retention_hours": 720,
+          "open_shard_count": 2,
+          "encryption_type": "KMS",
+          "key_id": "arn:aws:kms:eu-central-1:111122223333:key/44445555-6666-7777-8888-99990000aaaa",
+          "shard_level_metrics": [
+            "ALL"
+          ],
+          "shards": [
+            {
+              "shard_id": "shardId-000000000000",
+              "parent_shard_id": null,
+              "adjacent_parent_shard_id": null,
+              "starting_hash_key": "0",
+              "ending_hash_key": "170141183460469231731687303715884105727",
+              "closed": false
+            },
+            {
+              "shard_id": "shardId-000000000001",
+              "parent_shard_id": null,
+              "adjacent_parent_shard_id": null,
+              "starting_hash_key": "170141183460469231731687303715884105728",
+              "ending_hash_key": "340282366920938463463374607431768211455",
+              "closed": false
+            }
+          ],
+          "consumers": [
+            {
+              "name": "siem-forwarder",
+              "arn": "arn:aws:kinesis:eu-central-1:111122223333:stream/audit-trail/consumer/siem-forwarder:1762992000",
+              "status": "ACTIVE",
+              "creation_timestamp": "2026-11-13T00:00:00+00:00"
+            }
+          ],
+          "tags": {
+            "owner": "security",
+            "kinesis-throughput-mbps": "1.5"
+          }
+        }
+      ]
+    }
+  ]
+}

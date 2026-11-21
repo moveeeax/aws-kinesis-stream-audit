@@ -1,0 +1,31 @@
+# Every threshold the rule engine reads, with its default value.
+# Pass this file with --rules to override any subset of them.
+
+# Warn when retention is below this many hours.
+min_retention_hours: 24
+
+# Retention a stream carrying the critical tag must have (7 days).
+critical_retention_hours: 168
+
+# Tag key, or key=value, marking a stream as the source of record.
+critical_tag: source-of-record
+
+# Warn when shard capacity exceeds the declared throughput by more than this.
+overprovision_factor: 2.0
+
+# Warn on enhanced fan-out consumers registered longer ago than this.
+stale_consumer_days: 90
+
+# Registered-consumer limit per stream; above it, registrations are rejected.
+max_efo_consumers: 20
+
+# Warn when the widest open shard's hash range is this many times the narrowest.
+hash_range_skew_factor: 2.0
+
+# Warn on streams with no tags at all.
+require_tags: false
+
+# us-east-1 list prices; override per region.
+# https://aws.amazon.com/kinesis/data-streams/pricing/
+shard_hour_usd: 0.015
+efo_consumer_shard_hour_usd: 0.015

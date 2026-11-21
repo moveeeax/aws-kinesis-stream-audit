@@ -1,0 +1,15 @@
+{
+  "orders-events": {
+    "mb_per_s": 5,
+    "records_per_s": 4000
+  },
+  "clickstream-raw": {
+    "mb_per_s": 1.0
+  },
+  "telemetry-ondemand": {
+    "mb_per_s": 0.4
+  },
+  "audit-trail": {
+    "mb_per_s": 1.5
+  }
+}
